@@ -1,0 +1,56 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+fieldset{
+  border: none;
+}
+form label{
+    width: 100%;
+    display: flex;
+    align-items
+}
+form label input{
+  margin: 0 1em;
+  min-width: 30%;
+
+}
+.title h1{
+  
+}
+form{
+  border: 2px solid black;
+  padding-left = 0;
+  min-width: 40%;
+  max-width: 80%;
+  margin: 1em auto;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template: auto / repeat(auto-fill, minmax(fit-content, 1fr));
+  row-gap: 20px;
+  padding: 20px;
+}
+form input[type="url"]{
+  color: blue;
+  text-decoration: underline;
+}
+form input[type="url"]:hover{
+  cursor: pointer
+}
+.title p{
+  line-height:0;
+  text-align: center;
+}
+.title{
+  margin: 1em;
+}
+h1{
+  text-align: center;
+}
+.textbox{
+    width: 80%;
+    height: 20vh;
+    border: 2px solid black;
+    margin: auto;
+}
