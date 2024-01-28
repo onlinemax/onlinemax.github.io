@@ -28,7 +28,8 @@ function getDate(){
 
 function copyToClipboard(name, article, site, website){
   const date = getDate();
-  let text = "<p>" + name + ", " + "« " + article + " », " + "<i>" + site+ `</i> [En ligne], <a href="${website}">`+ website +  "</a>, "+ date + ".</p>";
+  if (name !== "") {name += ", ";} 
+  let text = "<p>" + name + "« " + article + " », " + "<i>" + site+ `</i> [En ligne], <a href="${website}">`+ website +  "</a>, "+ date + ".</p>";
   writeOnClipboard(text);  
   return text;
 }
