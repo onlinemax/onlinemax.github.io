@@ -18,7 +18,7 @@ form.addEventListener("submit", (evt) =>{
 const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Décembre"];
 
 function getDate(){
-  var text = "[Page consultée le "
+  var text = "[page consultée le "
   const now = new Date();
   text += now.getDate() + " ";
   text += monthNames[now.getMonth()] + " ";
