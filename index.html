@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="La page pour creer les sources">
+    <title>Sources</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+    <body>
+      <div class="title">
+        <h1>Sources</h1>
+        <p>Outil pour faire des sources</p>
+      </div>
+      <h2>Remplir les informations suivantes: </h2>
+      <form id="info" method="get">
+          <fieldset>
+            <label for="author_count">Combien d'auteurs y a t'il:&nbsp
+                <select name="author_count" id="author_count">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3 ou plus</option>
+                </select>
+            </label>
+            
+          </fieldset>
+          <fieldset class="author" id="first_name1">
+            <label><p>Le prénom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
+          </fieldset>
+          <fieldset class="author" id="name1">
+            <label><p>Le nom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
+          </fieldset>
+        <fieldset class="author" id="first_name2">
+            <label><p>Le prénom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
+          </fieldset>
+          <fieldset class="author" id="name2">
+            <label><p>Le nom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
+          </fieldset>
+        <fieldset class="author" id="first_name3">
+            <label><p>Le prénom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
+          </fieldset>
+          <fieldset class="author" id="name3">
+            <label><p>Le nom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
+          </fieldset>
+          <fieldset>
+            <label><p>Le titre de l'article: </p><input id="article_title" autocomplete="off" type="text" required>
+          </fieldset>
+          <fieldset>
+            <label><p>Le nom du site: </p><input autocomplete="off" required id="article_site"  type="text">
+          </fieldset>
+          <fieldset>
+            <label><p>Le site web: </p><input autocomplete="off" required id="website"  type="url">
+          </fieldset>
+            <input type="submit">
+      </form>        
+      <h2>Result: </h2>
+      <div class="textbox"></div>
+      <script src="script.js"></script>
+  </body>
+</html>   
+             
+        
+             
