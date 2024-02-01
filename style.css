@@ -5,29 +5,45 @@
 }
 fieldset{
   border: none;
+  grid-column: span 2;
+}
+select{
+  display: inline;
 }
 form label{
     width: 100%;
     display: flex;
-    align-items
+    align-items: center;
+}
+.author{
+    grid-column: span 1;
 }
 form label input{
   margin: 0 1em;
   min-width: 30%;
 
 }
+#name1, #first_name1{
+  display: none;
+}
+#name2, #first_name2{
+  display: none;
+}
+#name3, #first_name3{
+  display: none;
+}
 .title h1{
   
 }
 form{
   border: 2px solid black;
-  padding-left = 0;
+  padding-left: 0;
   min-width: 40%;
   max-width: 80%;
   margin: 1em auto;
   display: grid;
   grid-auto-flow: row;
-  grid-template: auto / repeat(auto-fill, minmax(fit-content, 1fr));
+  grid-template-columns: 1fr 1fr;
   row-gap: 20px;
   padding: 20px;
 }
