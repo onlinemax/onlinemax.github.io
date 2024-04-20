@@ -68,27 +68,28 @@ urlInput.addEventListener("click", (evt) =>{
 const form = document.getElementById("info");
 form.addEventListener("submit", (evt) =>{
   evt.preventDefault();
+  const lang = document.getElementById("lang").value;
   const name = getAuthorsName();
   const article = document.getElementById("article_title").value;
   const site = document.getElementById("article_site").value;
   const website = document.getElementById("website").value;
-  area.innerHTML = copyToClipboard(name, article, site, website);
+  area.innerHTML = copyToClipboard(lang,name, article, site, website);
 })
-const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Décembre"];
+const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Décembre", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-function getDate(){
-  var text = "[page consultée le "
+function getDate(lang){
+  var text = (lang == "fr") ? "[page consultée le " : "[page consulted the ";
   const now = new Date();
-  text += now.getDate() + " ";
-  text += monthNames[now.getMonth()] + " ";
+  text += now.getDate() + (lang == "fr" ? "" : "nd") + " ";
+  text += monthNames[now.getMonth() + (lang == "fr" ? 0 : 12)] + " ";
   text += now.getFullYear() + "]";
   return text;
 }
 
-function copyToClipboard(name, article, site, website){
-  const date = getDate();
+function copyToClipboard(lang,name, article, site, website){
+  const date = getDate(lang);
   if (name !== "") {name += ", ";} 
-  let text = "<p>" + name + "« " + article + " », " + "<i>" + site+ `</i> [En ligne], <a href="${website}">`+ website +  "</a>, "+ date + ".</p>";
+  let text = "<p>" + name + (lang === "fr" ? "« " : '"') + article + (lang === "fr" ? " », " : ' ", ') + "<i>" + site+ `</i> [${(lang == fr) ? "En ligne" : "Online"}], <a href="${website}">`+ website +  "</a>, "+ date + ".</p>";
   writeOnClipboard(text);  
   return text;
 }
