@@ -89,7 +89,7 @@ function getDate(lang){
 function copyToClipboard(lang,name, article, site, website){
   const date = getDate(lang);
   if (name !== "") {name += ", ";} 
-  let text = "<p>" + name + (lang === "fr" ? "« " : '"') + article + (lang === "fr" ? " », " : ' ", ') + "<i>" + site+ `</i> [${(lang == fr) ? "En ligne" : "Online"}], <a href="${website}">`+ website +  "</a>, "+ date + ".</p>";
+  let text = "<p>" + name + (lang === "fr" ? "« " : '"') + article + (lang === "fr" ? " », " : ' ", ') + "<i>" + site+ `</i> [${(lang == "fr") ? "En ligne" : "Online"}], <a href="${website}">`+ website +  "</a>, "+ date + ".</p>";
   writeOnClipboard(text);  
   return text;
 }
