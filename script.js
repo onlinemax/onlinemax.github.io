@@ -82,7 +82,7 @@ function getDate(lang){
   const now = new Date();
   text += now.getDate() + (lang == "fr" ? "" : "nd") + " ";
   text += monthNames[now.getMonth() + (lang == "fr" ? 0 : 12)] + " ";
-  text += now.getFullYear() + "]";
+  text += (lang == "fr" ? "" : "of ") + now.getFullYear() + "]";
   return text;
 }
 
