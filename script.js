@@ -75,7 +75,7 @@ form.addEventListener("submit", (evt) =>{
   const website = document.getElementById("website").value;
   area.innerHTML = copyToClipboard(lang,name, article, site, website);
 })
-const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Décembre", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const monthNames = ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function getDate(lang){
   var text = (lang == "fr") ? "[page consultée le " : "[page consulted the ";
