@@ -15,15 +15,22 @@
       <form id="info" method="get">
           <fieldset>
             <label for="author_count">Combien d'auteurs y a t'il:&nbsp
-                <select name="author_count" id="author_count">
+              <select name="author_count" id="author_count">
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3 ou plus</option>
                 </select>
             </label>
-            
           </fieldset>
+          <fielset>
+            <label for="lang">Dans quelle langue?:&nbsp
+              <select id="lang">
+                  <option value="fr">french</option>
+                  <option value="en">english</option>
+              </select>
+            </label>
+          </fielset>
           <fieldset class="author" id="first_name1">
             <label><p>Le prénom de l'auteur: </p><input autocomplete="off" id="nom"  type="text">
           </fieldset>
